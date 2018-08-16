@@ -44,7 +44,6 @@
         if (isset($_GET['curso'])){
         foreach ($perguntasPorCurso as $pergunta):
         if ($pergunta['curso'] == $curso) {
-        print_r($pergunta['curso']);
         ?>
         <div class="ui vertical segment">
             <?php if ($pergunta['status'] == "1") { ?>

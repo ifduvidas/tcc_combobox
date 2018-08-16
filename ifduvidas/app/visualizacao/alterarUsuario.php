@@ -10,7 +10,7 @@
 		
 		$(document).ready(function () {
 		
-			$.getJSON('cadastro.json', function (data) {
+			$.getJSON('../visualizacao/cadastro.json', function (data) {
 
 				var items = [];
 				var options = '<option value="">Aluno ou Professor?</option>';	
@@ -81,7 +81,7 @@
 		</select>
 		<div class="field"></div>
 		 <label>de</label>
-		<select name="atributos" id="atributos">
+		<select name="atributo" id="atributos">
 		</select>
   </div>
      <div class="field">

@@ -35,6 +35,19 @@ function recarregarCurtida() {
     <?=$numDeCurtidas['NumeroDeCurtida'];?>
   </a>
 </div>   
+
+<?php if  (isset($_SESSION['id_usuario']) and $pergunta['id_usuario'] == $_SESSION['id_usuario']){  ?>
+  <a href="../controlador/Usuarios.php?acao=deletarPergunta&id_pergunta=<?=$pergunta['id_pergunta']?>">
+    <div class="ui animated negative button" id="deletar" tabindex="0">
+        <div class="visible content">Deletar Pergunta</div>
+          <div class="hidden content">
+            <i class="trash alternate icon"></i>
+          </div>
+  </div>
+  </a>
+<?php }; ?>
+
+
     </div>
 		<div class="one wide column"></div>
 	</div>

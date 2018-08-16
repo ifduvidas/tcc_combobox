@@ -29,7 +29,7 @@ switch ($acao) {
         break;
 
 
-    case 'cadastrar';
+    case 'cadastrar':
         if (!isset($_POST['gravar'])) { // se ainda nao tiver preenchido o form
             include '../visualizacao/head.php';
             include '../visualizacao/cadastro.php';
@@ -44,7 +44,19 @@ switch ($acao) {
                 $email = $_POST['email'];
                 $data_nasc = $_POST['data_nasc'];
                 $atributo =  $_POST['atributo'];
-                $cod_tip = "5";
+                $tipo = $_POST['cod_tip'];
+                
+                switch ($tipo) {
+                    case 'Aluno':
+                        $cod_tip = '5';
+
+
+                        break;
+
+                    case'Professor':
+                        $cod_tip = '4';
+                        break;
+                }
 
                 $arquivo = $_FILES["foto_perf"];
                 $pasta_dir = "fotos/";
@@ -132,7 +144,7 @@ switch ($acao) {
         $crud1 = new CrudUsuarios();
         $delete = $crud1->DeleteUsuario($id_usuario);
 
-        //session_destroy();
+        session_destroy();
         header('location: Usuarios.php');
     break;   
 
@@ -148,7 +160,19 @@ switch ($acao) {
             $email = $_POST['email'];
             $data_nasc = $_POST['data_nasc'];
             $atributo =  $_POST['atributo'];
-            $cod_tip = "5";
+            $tipo = $_POST['cod_tip'];
+                
+                switch ($tipo) {
+                    case 'Aluno':
+                        $cod_tip = '5';
+
+
+                        break;
+
+                    case'Professor':
+                        $cod_tip = '4';
+                        break;
+                }
 
             $arquivo = $_FILES["foto_perf"];
             $pasta_dir = "fotos/";
@@ -194,7 +218,13 @@ switch ($acao) {
         };
         break;
 
+    case 'deletarPergunta':
+        $id_pergunta = $_GET["id_pergunta"];
+        $crud1 = new CrudPerguntas();
+        $delete = $crud1->deletePergunta($id_pergunta);
+        header('location: Usuarios.php');
 
+        break;
     case 'busca':
         $busca = $_POST['pesquisa'];
 

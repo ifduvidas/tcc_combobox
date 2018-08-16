@@ -76,7 +76,7 @@ class CrudPerguntas
     public function deletePergunta($id_pergunta)
     {
 
-        $consulta = "DELETE FROM perguntas WHERE id_pergunta = {$id_pergunta}";
+        $consulta = "DELETE FROM perguntas WHERE id_pergunta = $id_pergunta";
         try {
             $res = $this->conexao->exec($consulta);
             //return $res;
@@ -196,5 +196,5 @@ class CrudPerguntas
     }
 
 }
-//INSERT INTO perguntas (hora, data, descricao_pergunta, titulo, materia, curso, curtidas,id_usuario) VALUES (null, null ,'aaaa','meu deus','portugues',null ,null ,'41')
+
 ?>
