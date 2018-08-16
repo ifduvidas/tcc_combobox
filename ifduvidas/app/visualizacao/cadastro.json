@@ -1,0 +1,56 @@
+[{
+  "sigla": "P",
+  "nome": "Professor",
+  "cidades": [
+    "Matemática",
+    "Português",
+    "Geografia",
+    "História",
+    "Sociologia",
+    "Filosofia",
+    "Física",
+    "Espanhol",
+    "Inglês",
+    "Técnico em Informática",
+    "Técnico em Agropecuária",
+    "Técnico em Química"
+
+  ]
+},
+  {
+    "sigla": "A",
+    "nome": "Aluno",
+    "cidades": [
+      "1INFO1",
+      "1INFO2",
+      "1INFO3",
+      "2INFO1",
+      "2INFO2",
+      "2INFO3",
+      "3INFO1",
+      "3INFO2",
+      "3INFO3",
+      "1AGRO1",
+      "1AGRO2",
+      "1AGRO3",
+      "2AGRO1",
+      "2AGRO2",
+      "2AGRO3",
+      "3AGRO1",
+      "3AGRO2",
+      "3AGRO3",
+      "1QUIMI1",
+      "1QUIMI2",
+      "1QUIMI3",
+      "2QUIMI1",
+      "2QUIMI2",
+      "2QUIMI3",
+      "3QUIMI1",
+      "3QUIMI2",
+      "3QUIMI3",
+      "4QUIMI1",
+      "4QUIMI2",
+      "4QUIMI3"
+    ]
+
+  }]
